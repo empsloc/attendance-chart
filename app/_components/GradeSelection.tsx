@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react"
 import GlobalApi from "../_services/GlobalApi"
 
-function GradeSelection() {
+function GradeSelection({selectedGrade}:any) {
     const [grades,setGrades] = useState([])
     useEffect(()=>{
         GetAllGradesList()
@@ -17,6 +17,7 @@ function GradeSelection() {
     <div>
         
         <select
+        onChange={(e)=>selectedGrade(e.target.value)}
                     className="p-3 border rounded-xl"
                   >
                     {grades.map((item: any, index: any) => (

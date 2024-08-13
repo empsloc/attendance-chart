@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts","utils/**/*","utils/index.js", "drizzle.config.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts","utils/**/*","utils/index.js", "drizzle.config.js", "app/api/attendance/route.ts"],
   "exclude": ["node_modules"]
 }

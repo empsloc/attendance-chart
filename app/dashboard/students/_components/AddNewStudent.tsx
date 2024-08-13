@@ -20,7 +20,7 @@ type Inputs = {
   grade: string;
 };
 
-function AddNewStudent() {
+function AddNewStudent({refreshData}:any) {
   const [open, setOpen] = useState(false);
   const [grades, setGrades] = useState([]);
   const [loading,setLoading]= useState(false)
@@ -29,6 +29,7 @@ function AddNewStudent() {
      setLoading(true)
       if(res.data){
         reset()
+        refreshData()
         setOpen(false)
         toast('Student Added')
       }
